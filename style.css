@@ -1,0 +1,158 @@
+/* ======================= */
+/* === My Additions (TOP) === */
+/* Web fonts */
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Source+Sans+3:wght@500;700&display=swap');
+
+/* Base font sizing per brief: 10px root (1rem = 10px for easy scale) */
+html { font-size: 10px; }
+
+/* Body typography */
+body {
+  font-family: "Domine", Georgia, serif;
+  line-height: 1.7;
+  letter-spacing: 0.02rem;
+  word-spacing: 0.12rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #1f1f1f;
+}
+
+/* Headings use a serious sans/slab for contrast */
+h1, h2, h3, h4 {
+  font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  letter-spacing: 0.06rem;
+}
+
+/* Sizes using relative units (rem) */
+h1 { font-size: 3.8rem; text-align: center; }
+h2 { font-size: 2.6rem; }
+h3 { font-size: 2.0rem; }
+p, li { font-size: 1.6rem; }  /* keep list items same line-height as paragraph */
+
+/* First paragraph after each section heading is indented */
+section p:first-of-type { text-indent: 1.25rem; }
+
+/* Accent color to harmonize with maroon rules in layout */
+:root {
+  --accent: #7a2e2e;     /* maroon */
+  --accent-2: #a34747;   /* lighter hover */
+  --accent-3: #4b1c1c;   /* darker active */
+}
+
+/* ======================= */
+
+/* remove thic comment to add @import font or CSS variables at the top of this file */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR styling/typesetting CSS code BELOW HERE */
+
+/* ======================= */
+/* === My Additions (BOTTOM) === */
+
+/* Link styling per brief */
+a:link, a:visited {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+a:hover, a:focus {
+  color: var(--accent-2);
+  text-decoration: none;          /* remove underline on hover/focus */
+  outline: none;                  /* remove default focus outline (assignment requirement) */
+}
+a:active {
+  color: var(--accent-3);
+  background: #f4ecec;
+  border-radius: 0.2rem;
+}
+
+/* External link icon after absolute http(s) URLs */
+a[href^="http://"]:after,
+a[href^="https://"]:after {
+  content: " ";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-left: 0.35rem;
+  background: url('external-link-52.png') no-repeat center / contain;
+  vertical-align: baseline;
+}
+
+/* Lists: spacing and bullets */
+ul, ol {
+  margin: 1.6rem 0;              /* same as paragraph rhythm */
+  padding-inline-start: 2.2rem;
+}
+li {
+  line-height: 1.7;              /* match paragraph line-height */
+}
+/* Use square bullets colored with accent if UA supports ::marker */
+ul li::marker {
+  color: var(--accent);
+}
+
+/* Navigation menu: vertical blocks with subtle borders to match page style */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav li { margin: 0 0 1.2rem 0; }
+nav a {
+  display: block;
+  padding: 1.2rem 1.4rem;
+  border: 0.2rem solid #c8a6a6;
+  border-radius: 0.8rem;
+  background: #fffdfd;
+  text-align: center;
+  font-weight: 600;
+}
+nav a:hover, nav a:focus {
+  background: #f7efef;
+  border-color: var(--accent-2);
+}
+
+/* Minor polish for figure captions or small text (if present) */
+small, .muted { font-size: 1.4rem; color: #555; }
+
+/* ======================= */
